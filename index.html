@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Słoneczny Prąd – fotowoltaika bez tajemnic</title>
+  <meta name="description" content="Wszystko o fotowoltaice w jednym miejscu: jak działa, zalety i wady, ciekawostki, mity, koszty, dotacje i opinie właścicieli paneli.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='8' fill='%23f59e0b'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="#start" class="logo" aria-label="Słoneczny Prąd – strona główna">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="7"/><g class="rays"><path d="M16 2v4M16 26v4M2 16h4M26 16h4M6.1 6.1l2.8 2.8M23.1 23.1l2.8 2.8M6.1 25.9l2.8-2.8M23.1 8.9l2.8-2.8"/></g></svg>
+      <span>Słoneczny<strong>Prąd</strong></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Główna nawigacja">
+      <a href="#jak-dziala">Jak działa</a>
+      <a href="#za-i-przeciw">Za i przeciw</a>
+      <a href="#ciekawostki">Ciekawostki</a>
+      <a href="#mity">Mity</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#koszty">Koszty</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="topbar__actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Przełącz tryb jasny/ciemny">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="start">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">Poradnik o energii ze słońca</p>
+      <h1>Fotowoltaika <span class="hl">bez tajemnic</span></h1>
+      <p class="lead">Jak działają panele słoneczne, ile naprawdę kosztują, kiedy się opłacają, a kiedy nie. Bez marketingu, z liczbami, ciekawostkami i opiniami ludzi, którzy mają panele na dachu.</p>
+      <div class="hero__cta">
+        <a href="#opinie" class="btn btn--primary">Opinie właścicieli</a>
+        <a href="#za-i-przeciw" class="btn btn--ghost">Zalety i wady</a>
+      </div>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 400 320">
+        <defs>
+          <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2d5fa8"/><stop offset="1" stop-color="#173a70"/>
+          </linearGradient>
+          <radialGradient id="sunGlow"><stop offset="0" stop-color="#fcd34d" stop-opacity=".9"/><stop offset="1" stop-color="#fcd34d" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="300" cy="80" r="90" fill="url(#sunGlow)"/>
+        <circle class="sun-core" cx="300" cy="80" r="38" fill="#f59e0b"/>
+        <g class="beams" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 10">
+          <path d="M270 110 L190 180"/><path d="M285 120 L230 200"/><path d="M255 100 L150 165"/>
+        </g>
+        <!-- dom -->
+        <path d="M60 300 V200 L150 135 L240 200 V300 Z" class="house"/>
+        <path d="M40 210 L150 128 L260 210" class="roof-line"/>
+        <!-- panele na dachu -->
+        <g transform="translate(29 161) rotate(-36.5)">
+          <g fill="url(#panelGrad)" stroke="#9bb8e6" stroke-width="1">
+            <rect x="0" y="0" width="30" height="20" rx="2"/><rect x="33" y="0" width="30" height="20" rx="2"/><rect x="66" y="0" width="30" height="20" rx="2"/>
+            <rect x="0" y="23" width="30" height="20" rx="2"/><rect x="33" y="23" width="30" height="20" rx="2"/><rect x="66" y="23" width="30" height="20" rx="2"/>
+          </g>
+        </g>
+        <rect x="128" y="240" width="44" height="60" rx="4" class="door"/>
+        <rect x="80" y="225" width="30" height="28" rx="3" class="window"/>
+        <rect x="190" y="225" width="30" height="28" rx="3" class="window"/>
+        <path d="M0 300 H400" class="ground"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="stats">
+      <li><span class="stats__num">~27 GW</span><span class="stats__label">mocy PV w Polsce (maj 2026)</span></li>
+      <li><span class="stats__num">1,64 mln</span><span class="stats__label">domowych mikroinstalacji</span></li>
+      <li><span class="stats__num">~1000 kWh</span><span class="stats__label">rocznie z 1 kWp w naszym klimacie</span></li>
+      <li><span class="stats__num">25–30 lat</span><span class="stats__label">typowa żywotność paneli</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- JAK DZIAŁA -->
+<section class="section" id="jak-dziala">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Podstawy</p>
+      <h2>Jak działa fotowoltaika?</h2>
+      <p>Ogniwo fotowoltaiczne to płytka półprzewodnika (najczęściej krzemu). Gdy padają na nią fotony, wybijają elektrony i w obwodzie zaczyna płynąć prąd. Bez ruchomych części, bez spalania, bez hałasu. To tzw. <strong>efekt fotowoltaiczny</strong>.</p>
+    </header>
+
+    <ol class="flow">
+      <li class="flow__step">
+        <span class="flow__num">1</span>
+        <h3>Panele</h3>
+        <p>Zamieniają światło słoneczne na <strong>prąd stały (DC)</strong>. Działają też przy zachmurzeniu, tylko słabiej.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__num">2</span>
+        <h3>Falownik (inwerter)</h3>
+        <p>„Mózg” instalacji. Zamienia prąd stały na <strong>przemienny (AC, 230 V)</strong>, taki jak w gniazdku, i pilnuje pracy całego systemu.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__num">3</span>
+        <h3>Twój dom</h3>
+        <p>Energia najpierw zasila urządzenia w domu. To <strong>autokonsumpcja</strong>, czyli najbardziej opłacalny sposób wykorzystania prądu z PV.</p>
+      </li>
+      <li class="flow__step">
+        <span class="flow__num">4</span>
+        <h3>Magazyn lub sieć</h3>
+        <p>Nadwyżki trafiają do <strong>magazynu energii</strong> albo do sieci, gdzie w systemie <strong>net-billing</strong> są rozliczane po cenie rynkowej.</p>
+      </li>
+    </ol>
+
+    <div class="callout">
+      <h3>Net-billing w pigułce</h3>
+      <p>Od kwietnia 2022 r. nowi prosumenci nie „magazynują” prądu w sieci w proporcji 1:0,8 jak dawniej (net-metering). Energię oddaną do sieci <strong>sprzedajesz</strong> po rynkowej cenie, a tę pobraną <strong>kupujesz</strong> po cenie z taryfy. Wartość sprzedanej energii trafia na tzw. depozyt prosumencki, z którego płacisz za prąd pobrany później. Wniosek: dziś najbardziej opłaca się zużywać prąd z paneli od razu, w ciągu dnia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ZA I PRZECIW -->
+<section class="section section--alt" id="za-i-przeciw">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Uczciwie</p>
+      <h2>Za i przeciw</h2>
+      <p>Fotowoltaika nie jest dobra dla każdego. Oto argumenty, które warto zważyć przed podpisaniem umowy.</p>
+    </header>
+
+    <div class="proscons">
+      <div class="pc pc--pro">
+        <h3><span class="pc__badge" aria-hidden="true">+</span> Zalety</h3>
+        <ul>
+          <li><strong>Niższe rachunki.</strong> Każda kWh zużyta prosto z paneli to kWh, której nie kupujesz od sprzedawcy, razem z opłatami dystrybucyjnymi.</li>
+          <li><strong>Czysta energia.</strong> Ok. 50 g CO₂ na kWh w całym cyklu życia paneli, wobec 800–1000 g z elektrowni węglowych.</li>
+          <li><strong>Trwałość.</strong> Producenci gwarantują zwykle 80–90% mocy po 25–30 latach. Falowniki mają gwarancję 10 lat i dłużej.</li>
+          <li><strong>Prawie bezobsługowa.</strong> Brak ruchomych części, cicha praca. Wystarczy przegląd raz na kilka lat.</li>
+          <li><strong>Ochrona przed podwyżkami.</strong> Część energii masz po stałym „koszcie”, niezależnie od tego, co dzieje się z cenami prądu.</li>
+          <li><strong>Dotacje i ulgi.</strong> Program „Mój Prąd” oraz ulga termomodernizacyjna mogą wyraźnie obniżyć koszt inwestycji.</li>
+          <li><strong>Wartość nieruchomości.</strong> Dom z instalacją PV zwykle łatwiej sprzedać. Badania z USA mówią o wzroście wartości o ok. 4%.</li>
+          <li><strong>Wykorzystanie „martwej” przestrzeni.</strong> Dach, wiata garażowa, elewacja, balkon czy ogrodzenie.</li>
+        </ul>
+      </div>
+      <div class="pc pc--con">
+        <h3><span class="pc__badge" aria-hidden="true">−</span> Wady</h3>
+        <ul>
+          <li><strong>Wysoki koszt na start.</strong> W 2026 r. to ok. 5 200–6 300 zł brutto za 1 kWp, czyli 30–50 tys. zł za typową domową instalację.</li>
+          <li><strong>Zależność od pogody i pory roku.</strong> W grudniu instalacja produkuje kilka razy mniej niż w czerwcu.</li>
+          <li><strong>Nie działa w nocy.</strong> Wieczorem, gdy zużycie w domu jest największe, panele już nie pracują.</li>
+          <li><strong>Net-billing obniżył opłacalność nadwyżek.</strong> W słoneczne południa rynkowa cena energii bywa bardzo niska, czasem nawet ujemna.</li>
+          <li><strong>Przeciążone sieci.</strong> Przy wysokim napięciu falownik się wyłącza, a operatorzy coraz częściej ograniczają produkcję. W 2026 r. skala tych redukcji była rekordowa.</li>
+          <li><strong>Drogie magazyny energii.</strong> Podnoszą autokonsumpcję, ale też koszt całego systemu o kilkanaście–kilkadziesiąt tys. zł.</li>
+          <li><strong>Nie każdy dach się nadaje.</strong> Zacienienie, zła orientacja albo słaba konstrukcja mogą przekreślić opłacalność.</li>
+          <li><strong>Ryzyko złego montażu.</strong> Tani, nieuczciwy wykonawca to najczęstsza przyczyna awarii i rozczarowań.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="verdict">
+      <h3>Kiedy fotowoltaika ma największy sens?</h3>
+      <ul class="checklist">
+        <li>Zużywasz dużo prądu <strong>w dzień</strong> (praca zdalna, pompa ciepła, klimatyzacja, auto elektryczne).</li>
+        <li>Masz dach skierowany na <strong>południe</strong> lub wschód–zachód, bez cienia drzew i kominów.</li>
+        <li>Planujesz mieszkać w tym domu <strong>co najmniej 10 lat</strong>.</li>
+        <li>Możesz skorzystać z <strong>dotacji lub ulgi</strong> albo rozważasz magazyn energii.</li>
+        <li>Wybierasz <strong>sprawdzonego instalatora</strong> z opiniami i realną gwarancją.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CIEKAWOSTKI -->
+<section class="section" id="ciekawostki">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Czy wiesz, że…</p>
+      <h2>Ciekawostki o fotowoltaice</h2>
+    </header>
+
+    <div class="facts">
+      <article class="fact">
+        <span class="fact__big">1839</span>
+        <h3>Odkrycie nastolatka</h3>
+        <p>Efekt fotowoltaiczny odkrył 19-letni Francuz Edmond Becquerel, eksperymentując z elektrodami zanurzonymi w roztworze.</p>
+      </article>
+      <article class="fact fact--pl">
+        <span class="fact__big">Czochralski</span>
+        <h3>Polski wkład w każdy panel</h3>
+        <p>Większość monokrystalicznego krzemu do ogniw powstaje metodą opracowaną w 1916 r. przez polskiego chemika Jana Czochralskiego.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">1954</span>
+        <h3>Pierwsze praktyczne ogniwo</h3>
+        <p>Laboratoria Bella pokazały krzemowe ogniwo o sprawności ok. 6%. Dziś panele w sklepach osiągają 20–23%.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">1958</span>
+        <h3>Wciąż na orbicie</h3>
+        <p>Vanguard 1, pierwszy satelita zasilany ze słońca, nadal krąży wokół Ziemi. To najstarszy obiekt zbudowany przez człowieka na orbicie.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">−0,4%</span>
+        <h3>Panele lubią chłód</h3>
+        <p>Na każdy stopień powyżej 25°C ogniwa tracą ok. 0,3–0,4% mocy. Dlatego słoneczny, chłodny kwietniowy dzień potrafi dać rekordową produkcję.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">~1,5 h</span>
+        <h3>Ile energii daje Słońce?</h3>
+        <p>W ok. półtorej godziny do Ziemi dociera tyle energii słonecznej, ile ludzkość zużywa w ciągu całego roku.</p>
+      </article>
+      <article class="fact fact--pl">
+        <span class="fact__big">Perowskity</span>
+        <h3>Polska technologia przyszłości</h3>
+        <p>Olga Malinkiewicz opracowała sposób nanoszenia ogniw perowskitowych na cienką, giętką folię. Mogą one pokryć np. okna i elewacje.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">&gt;34%</span>
+        <h3>Rekordy sprawności</h3>
+        <p>Laboratoryjne ogniwa tandemowe (krzem + perowskit) przekroczyły 34% sprawności, czyli o połowę więcej niż typowy panel.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">−90%</span>
+        <h3>Spadek cen</h3>
+        <p>Od 2010 r. ceny modułów fotowoltaicznych spadły o ponad 90%. To jedna z najszybciej taniejących technologii w historii energetyki.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">1–2 lata</span>
+        <h3>Energia się zwraca</h3>
+        <p>Tyle w Europie trwa, zanim panel wyprodukuje energię zużytą na jego wytworzenie. Potem przez 20+ lat daje „czysty zysk”.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">Śnieg</span>
+        <h3>Biały pomocnik</h3>
+        <p>Śnieg leżący wokół instalacji odbija światło. Panele dwustronne (bifacjalne) zbierają je tylną stroną i produkują więcej.</p>
+      </article>
+      <article class="fact">
+        <span class="fact__big">Agro-PV</span>
+        <h3>Panele nad polem</h3>
+        <p>Agrowoltaika łączy uprawy z produkcją prądu. Panele dają roślinom cień, ograniczają parowanie wody i chronią przed gradem.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MITY -->
+<section class="section section--alt" id="mity">
+  <div class="container container--narrow">
+    <header class="section__head">
+      <p class="eyebrow">Mit kontra fakt</p>
+      <h2>Najpopularniejsze mity</h2>
+      <p>Kliknij mit, aby zobaczyć, jak jest naprawdę.</p>
+    </header>
+
+    <div class="myths">
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> W Polsce jest za mało słońca, żeby to miało sens.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Polska ma nasłonecznienie podobne do Niemiec, które przez lata były liderem fotowoltaiki w Europie. 1 kWp daje u nas ok. 900–1100 kWh rocznie, a to wystarczy, żeby inwestycja się zwróciła.</p></div>
+      </details>
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> Zimą i w pochmurne dni panele w ogóle nie działają.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Działają, tylko słabiej. Panele wykorzystują też światło rozproszone. Przy pełnym zachmurzeniu dają zwykle 10–25% mocy, a niska temperatura poprawia ich sprawność.</p></div>
+      </details>
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> Wyprodukowanie panelu zużywa więcej energii, niż on kiedykolwiek wytworzy.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Energetyczny czas zwrotu nowoczesnych paneli w Europie to ok. 1–2 lata. Przy żywotności 25–30 lat panel produkuje kilkanaście razy więcej energii, niż kosztowało jego wytworzenie.</p></div>
+      </details>
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> Zużytych paneli nie da się zutylizować.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Panel to głównie szkło, aluminium i krzem. Nawet ok. 90–95% jego masy można odzyskać. W UE producenci muszą finansować zbiórkę i recykling zużytych modułów.</p></div>
+      </details>
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> Panele przyciągają pioruny.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Instalacja PV nie zwiększa istotnie ryzyka uderzenia pioruna. Warto jednak zadbać o ochronniki przepięciowe i, jeśli budynek go ma, o połączenie z instalacją odgromową.</p></div>
+      </details>
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> Fotowoltaika to częsta przyczyna pożarów.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Pożary zdarzają się rzadko i zwykle wynikają z błędów montażu, np. źle zaciśniętych lub niedopasowanych złączy. Dlatego tak ważny jest certyfikowany instalator i dobre komponenty.</p></div>
+      </details>
+      <details class="myth">
+        <summary><span class="tag tag--myth">Mit</span> Mając panele, nie płacę już żadnych rachunków za prąd.</summary>
+        <div class="myth__body"><span class="tag tag--fact">Fakt</span><p>Rachunki spadają, ale rzadko do zera. Zostają opłaty stałe (np. abonamentowa, mocowa), a w net-billingu prąd pobrany zimą i nocą kupujesz po cenie z taryfy.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section class="section" id="opinie">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Z życia wzięte</p>
+      <h2>Opinie właścicieli paneli</h2>
+      <p>Jak fotowoltaika sprawdza się w praktyce? Zebraliśmy historie prosumentów opisane w polskich mediach branżowych. Są wśród nich zachwyty, ale też rozczarowania.</p>
+    </header>
+
+    <ul class="survey" aria-label="Wyniki ankiety wśród użytkowników fotowoltaiki">
+      <li><span class="survey__num">93%</span><span class="survey__label">użytkowników nie miało żadnej awarii instalacji</span></li>
+      <li><span class="survey__num">58%</span><span class="survey__label">awarii usunięto w ciągu tygodnia</span></li>
+      <li><span class="survey__num">85%</span><span class="survey__label">miało przegląd instalacji przed jej uruchomieniem</span></li>
+    </ul>
+    <p class="survey__src">Ankieta Oferteo.pl na grupie 499 użytkowników fotowoltaiki (2021), za GLOBEnergia.</p>
+
+    <div class="reviews">
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">T</span>
+          <div>
+            <h3>Tomek</h3>
+            <p class="review__meta">gospodarstwo pod Radomiem · 7 kW · od 2020 r.</p>
+          </div>
+          <span class="verdict-tag verdict-tag--good">Zadowolony</span>
+        </header>
+        <p>Instalacja kosztowała ok. 25 tys. zł, a po dotacji z „Mój Prąd” i uldze podatkowej ok. 18 tys. zł. Rachunki spadły z ok. 500 zł do ok. 100 zł miesięcznie, czyli o ponad 4 tys. zł rocznie. Liczy, że inwestycja zwróciła mu się po ok. 5 latach.</p>
+        <a class="review__src" href="https://kb.pl/oze/fotowoltaika/opinie-na-temat-fotowoltaiki/" target="_blank" rel="noopener">Źródło: KB.pl</a>
+      </article>
+
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">E</span>
+          <div>
+            <h3>Emila</h3>
+            <p class="review__meta">dach budynku gospodarczego · 3,24 kW · mikroinwertery</p>
+          </div>
+          <span class="verdict-tag verdict-tag--good">Zadowolona</span>
+        </header>
+        <p>W pierwszym roku instalacja dała ok. 3360 kWh, czyli ponad 1000 kWh z każdego kW. Przez większość roku płaciła tylko opłaty stałe, ok. 20 zł miesięcznie. Były też minusy: przez błąd montażu panele stały prawie miesiąc, a potem firma instalacyjna zbankrutowała i Emila straciła gwarancję na montaż.</p>
+        <a class="review__src" href="https://enerad.pl/fotowoltaika-po-roku-jak-zmienilo-sie-moje-zycie/" target="_blank" rel="noopener">Źródło: Enerad.pl</a>
+      </article>
+
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">A</span>
+          <div>
+            <h3>Pani Anna</h3>
+            <p class="review__meta">dom pod miastem · rodzina 3-pokoleniowa · z magazynem energii</p>
+          </div>
+          <span class="verdict-tag verdict-tag--good">Zadowolona</span>
+        </header>
+        <p>Cała rodzina przeniosła pranie, gotowanie i ładowanie urządzeń na godziny 10–15, gdy panele produkują najwięcej. Pierwsze tygodnie były nauką nowych nawyków, a dziadek długo nie wierzył, że nadwyżka energii nie przepada. Po pół roku rachunki były niższe o ponad 40%.</p>
+        <a class="review__src" href="https://kb.pl/aktualnosci/listy-i-historie/panele-na-dachu-i-rodzinne-wyzwania/" target="_blank" rel="noopener">Źródło: KB.pl</a>
+      </article>
+
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">W</span>
+          <div>
+            <h3>Właściciel domu pod Krakowem</h3>
+            <p class="review__meta">9,86 kWp · pompa ciepła zamiast gazu · od 2019 r.</p>
+          </div>
+          <span class="verdict-tag verdict-tag--good">Zadowolony</span>
+        </header>
+        <p>Panele w połączeniu z pompą ciepła zastąpiły kocioł gazowy. W starym systemie rozliczeń (opusty) za cały 2021 rok zapłacił ok. 300 zł za prąd, ogrzewanie i ciepłą wodę. Bez paneli za pół roku zapłaciłby ok. 3,5 tys. zł.</p>
+        <a class="review__src" href="https://globenergia.pl/koszty-ogrzewania-pompa-ciepla-w-net-billingu-analiza-polaczenia-fotowoltaiki-z-pompa-ciepla-na-realnej-instalacji/" target="_blank" rel="noopener">Źródło: GLOBEnergia</a>
+      </article>
+
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">M</span>
+          <div>
+            <h3>Michał</h3>
+            <p class="review__meta">blok w Słupsku · 2 panele na balkonie · ok. 1,1 kWp</p>
+          </div>
+          <span class="verdict-tag verdict-tag--good">Zadowolony</span>
+        </header>
+        <p>Nie mógł zamontować paneli na dachu bloku, więc przykręcił dwa do balustrady balkonu. Chciał ograniczyć pobór z sieci, żeby zmniejszyć opłatę mocową, i mówi, że panele spełniły jego założenia. Minus: żadna firma nie chciała się podjąć tak małego zlecenia, więc zamontował wszystko sam.</p>
+        <a class="review__src" href="https://www.gramwzielone.pl/?p=106203" target="_blank" rel="noopener">Źródło: Gramwzielone.pl</a>
+      </article>
+
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">Ł</span>
+          <div>
+            <h3>Łukasz</h3>
+            <p class="review__meta">nowa instalacja · rozliczenie w net-billingu</p>
+          </div>
+          <span class="verdict-tag verdict-tag--mixed">Mieszane uczucia</span>
+        </header>
+        <p>Spodziewał się rachunku na kilkadziesiąt złotych, a pierwszy wyniósł ponad 160 zł. Na koncie prosumenckim nie było depozytu, a infolinia za każdym razem tłumaczyła sprawę inaczej. Po zmianie taryfy na G12 i większej autokonsumpcji jest lepiej, ale net-billing nadal uważa za mało przejrzysty.</p>
+        <a class="review__src" href="https://kb.pl/aktualnosci/listy-i-historie/net-billing-problemy-z-rozliczeniem/" target="_blank" rel="noopener">Źródło: KB.pl</a>
+      </article>
+
+      <article class="review">
+        <header class="review__head">
+          <span class="avatar" aria-hidden="true">A</span>
+          <div>
+            <h3>Ania</h3>
+            <p class="review__meta">okolice Wrocławia · 8 kW + pompa ciepła · od 2022 r.</p>
+          </div>
+          <span class="verdict-tag verdict-tag--bad">Rozczarowana</span>
+        </header>
+        <p>Na panele wydała 35 tys. zł, a na pompę ciepła 25 tys. zł. Zamiast spaść, rachunki wzrosły kilkukrotnie, do ok. 2000 zł miesięcznie. Okazało się, że wykonawca źle podłączył instalację, a naprawa kosztowała prawie 5 tys. zł. Najbardziej żałuje wyboru firmy.</p>
+        <a class="review__src" href="https://kb.pl/oze/fotowoltaika/opinie-na-temat-fotowoltaiki/" target="_blank" rel="noopener">Źródło: KB.pl</a>
+      </article>
+    </div>
+
+    <div class="lessons">
+      <h3>Co powtarza się w opiniach?</h3>
+      <ol>
+        <li><strong>Wykonawca jest ważniejszy niż sprzęt.</strong> Większość problemów, od przestojów po wysokie rachunki, wynikała z błędów montażu, a nie z wad paneli.</li>
+        <li><strong>Starsze instalacje chwali się bardziej.</strong> Najbardziej zadowoleni są właściciele rozliczani jeszcze w systemie opustów. W net-billingu oszczędności są mniejsze, a rachunki trudniej przewidzieć.</li>
+        <li><strong>Nawyki dają realne pieniądze.</strong> Pranie czy zmywanie w środku dnia zwiększa autokonsumpcję i obniża rachunki.</li>
+        <li><strong>Warto śledzić instalację.</strong> Aplikacja falownika pozwala szybko zauważyć, że coś przestało działać, zanim minie kilka tygodni.</li>
+      </ol>
+    </div>
+    <p class="note">Opinie streściliśmy własnymi słowami na podstawie artykułów w podanych źródłach. Imiona podajemy tak, jak w tych publikacjach.</p>
+  </div>
+</section>
+
+<!-- KOSZTY -->
+<section class="section section--alt" id="koszty">
+  <div class="container">
+    <header class="section__head">
+      <p class="eyebrow">Pieniądze</p>
+      <h2>Ile to kosztuje i skąd wziąć dopłatę?</h2>
+    </header>
+
+    <div class="cost-grid">
+      <div class="card">
+        <h3>Orientacyjne ceny w 2026 r.</h3>
+        <p class="muted">Instalacja na dachu, brutto, bez magazynu energii.</p>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Moc</th><th>Dla zużycia ok.</th><th>Cena</th></tr></thead>
+            <tbody>
+              <tr><td>4 kWp</td><td>3 000–3 500 kWh</td><td>21–25 tys. zł</td></tr>
+              <tr><td>6 kWp</td><td>4 500–5 500 kWh</td><td>31–38 tys. zł</td></tr>
+              <tr><td>8 kWp</td><td>6 500–7 500 kWh</td><td>42–50 tys. zł</td></tr>
+              <tr><td>10 kWp</td><td>8 500–10 000 kWh</td><td>52–63 tys. zł</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted">Wyliczone na podstawie stawki ok. 5 200–6 300 zł/kWp (kb.pl). Magazyn energii to dodatkowy koszt.</p>
+      </div>
+
+      <div class="card">
+        <h3>Program „Mój Prąd”</h3>
+        <p>Rządowy program NFOŚiGW dla prosumentów. W edycji 6.0 dotacja wynosiła <strong>do 7 000 zł</strong> na instalację PV (2–10 kWp) i do <strong>23 000 zł</strong> łącznie z magazynem energii.</p>
+        <p class="small muted">Warunki zmieniają się co edycję. Coraz większy nacisk kładzie się na magazyny energii, a dopłata wymaga rozliczania w net-billingu. Aktualne zasady sprawdzisz na mojprad.gov.pl.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ulga termomodernizacyjna</h3>
+        <p>Właściciel domu jednorodzinnego może odliczyć od dochodu koszt instalacji, <strong>do 53 000 zł</strong> na osobę (wspólnie z innymi wydatkami termomodernizacyjnymi).</p>
+        <p class="small muted">Odliczenie pomniejsza się o otrzymaną dotację. Realny zwrot zależy od progu podatkowego: 12% lub 32% odliczonej kwoty.</p>
+      </div>
+
+      <div class="card">
+        <h3>Na co uważać przy wyborze firmy</h3>
+        <ul class="dots">
+          <li>Poproś o 3–4 oferty i porównuj <strong>konkretne modele</strong> paneli i falownika.</li>
+          <li>Sprawdź, czy instalator ma <strong>certyfikat UDT</strong> i opinie z ostatnich lat.</li>
+          <li>Uważaj na obietnice „rachunków za 0 zł” i presję typu „promocja tylko dziś”.</li>
+          <li>Upewnij się, kto odpowiada za gwarancję na montaż i szczelność dachu.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container container--narrow">
+    <header class="section__head">
+      <p class="eyebrow">Pytania</p>
+      <h2>Najczęściej zadawane pytania</h2>
+    </header>
+    <div class="myths faq">
+      <details class="myth">
+        <summary>Jak dobrać moc instalacji?</summary>
+        <div class="myth__body"><p>Prosta reguła: roczne zużycie w kWh podzielone przez 1000 daje przybliżoną moc w kWp. Przy 4 000 kWh to ok. 4 kWp. W net-billingu nie opłaca się mocno przewymiarowywać instalacji, bo nadwyżki sprzedajesz tanio. Większa moc ma sens, gdy planujesz pompę ciepła, auto elektryczne albo magazyn energii.</p></div>
+      </details>
+      <details class="myth">
+        <summary>Czy potrzebuję pozwolenia na budowę?</summary>
+        <div class="myth__body"><p>Mikroinstalacja do 50 kW nie wymaga pozwolenia na budowę. Instalator zgłasza ją do operatora sieci (OSD), który wymienia licznik na dwukierunkowy. Instalacje powyżej 6,5 kW wymagają dodatkowo uzgodnienia z rzeczoznawcą ds. zabezpieczeń przeciwpożarowych i zgłoszenia do straży pożarnej.</p></div>
+      </details>
+      <details class="myth">
+        <summary>Na jaki kierunek powinien wychodzić dach?</summary>
+        <div class="myth__body"><p>Najwięcej energii daje dach skierowany na południe, nachylony pod kątem ok. 30–40°. Układ wschód–zachód produkuje ok. 10–15% mniej w skali roku, ale rozkłada produkcję na rano i popołudnie, co może zwiększyć autokonsumpcję.</p></div>
+      </details>
+      <details class="myth">
+        <summary>Czy panele trzeba myć?</summary>
+        <div class="myth__body"><p>Zwykle nie. Deszcz i śnieg wystarczająco je oczyszczają, zwłaszcza przy nachyleniu powyżej 15°. Mycie (miękką szczotką i czystą wodą, bez detergentów) może się przydać przy dużym zapyleniu, np. w pobliżu pól czy dróg gruntowych.</p></div>
+      </details>
+      <details class="myth">
+        <summary>Czy grad może zniszczyć panele?</summary>
+        <div class="myth__body"><p>Certyfikowane panele przechodzą test uderzenia kulami lodu o średnicy 25 mm lecących z prędkością ok. 23 m/s. Bardzo duży grad może je uszkodzić, dlatego warto dopisać instalację do polisy ubezpieczeniowej domu.</p></div>
+      </details>
+      <details class="myth">
+        <summary>Czy mając panele, będę mieć prąd podczas awarii sieci?</summary>
+        <div class="myth__body"><p>Zwykle nie. Standardowy falownik sieciowy wyłącza się, gdy znika napięcie w sieci, ze względu na bezpieczeństwo elektryków naprawiających awarię. Zasilanie awaryjne zapewnia dopiero falownik hybrydowy z magazynem energii i funkcją backup.</p></div>
+      </details>
+      <details class="myth">
+        <summary>Co to jest kWp?</summary>
+        <div class="myth__body"><p>Kilowat szczytowy (kWp) to moc instalacji w standardowych warunkach testowych (nasłonecznienie 1000 W/m², temperatura ogniwa 25°C). W praktyce instalacja rzadko osiąga pełną moc, ale kWp pozwala łatwo porównywać oferty.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ŹRÓDŁA -->
+<section class="section section--alt sources" id="zrodla">
+  <div class="container container--narrow">
+    <h2>Źródła i dalsza lektura</h2>
+    <ul>
+      <li><a href="https://globenergia.pl/polska-ma-juz-prawie-27-gw-fotowoltaiki-rynek-nie-hamuje-ale-zmienia-silnik/" target="_blank" rel="noopener">Globenergia: Polska ma już prawie 27 GW fotowoltaiki (dane ARE, maj 2026)</a></li>
+      <li><a href="https://enerad.pl/fotowoltaika-wady-i-zalety-czy-warto/" target="_blank" rel="noopener">Enerad: Fotowoltaika – wady i zalety</a></li>
+      <li><a href="https://kb.pl/aktualnosci/fotowoltaika/ceny-fotowoltaiki-w-2026/" target="_blank" rel="noopener">KB.pl: Ceny fotowoltaiki w 2026 roku</a></li>
+      <li><a href="https://www.gramwzielone.pl/?p=20154914" target="_blank" rel="noopener">Gramwzielone.pl: Fotowoltaika – wady i zalety</a></li>
+      <li><a href="https://sum.money/pl/fotowoltaika-oplacalnosc/" target="_blank" rel="noopener">Sum.money: Opłacalność fotowoltaiki, Mój Prąd 6.0, ulga termomodernizacyjna</a></li>
+      <li><a href="https://enerad.pl/fotowoltaika-po-roku-jak-zmienilo-sie-moje-zycie/" target="_blank" rel="noopener">Enerad: Fotowoltaika po roku – jak zmieniło się moje życie</a></li>
+      <li><a href="https://kb.pl/aktualnosci/listy-i-historie/panele-na-dachu-i-rodzinne-wyzwania/" target="_blank" rel="noopener">KB.pl: Założyli fotowoltaikę i musieli zmienić całe życie</a></li>
+      <li><a href="https://kb.pl/aktualnosci/listy-i-historie/net-billing-problemy-z-rozliczeniem/" target="_blank" rel="noopener">KB.pl: Z fotowoltaiką miał płacić mniej za prąd</a></li>
+      <li><a href="https://kb.pl/oze/fotowoltaika/opinie-na-temat-fotowoltaiki/" target="_blank" rel="noopener">KB.pl: Opinie o fotowoltaice</a></li>
+      <li><a href="https://www.gramwzielone.pl/?p=106203" target="_blank" rel="noopener">Gramwzielone.pl: Fotowoltaika na balkonie</a></li>
+      <li><a href="https://globenergia.pl/koszty-ogrzewania-pompa-ciepla-w-net-billingu-analiza-polaczenia-fotowoltaiki-z-pompa-ciepla-na-realnej-instalacji/" target="_blank" rel="noopener">GLOBEnergia: Fotowoltaika z pompą ciepła na realnej instalacji</a></li>
+      <li><a href="https://globenergia.pl/tylko-8-proc-uzytkownikow-fotowoltaiki-doswiadczylo-awarii-kluczowe-gwarancje/" target="_blank" rel="noopener">GLOBEnergia: Tylko 8% użytkowników fotowoltaiki doświadczyło awarii</a></li>
+      <li><a href="https://mojprad.gov.pl/" target="_blank" rel="noopener">Mój Prąd: oficjalna strona programu</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p><strong>Słoneczny Prąd</strong> to strona informacyjna. Nie sprzedajemy instalacji i nie udzielamy porad finansowych.</p>
+    <p class="muted small">Dane orientacyjne, stan na 2026 r. Ceny, stawki i warunki dotacji mogą się zmieniać.</p>
+    <a href="#start" class="to-top">Do góry ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
