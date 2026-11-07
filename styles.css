@@ -1,82 +1,82 @@
 /* ===== Tokeny ===== */
 :root {
   color-scheme: light;
-  --bg: #f5f9f8;
-  --bg-alt: #e9f2f0;
+  --bg: #f7f8fb;
+  --bg-alt: #eef1f7;
   --surface: #ffffff;
-  --border: #d5e3e0;
-  --text: #0f1f1d;
-  --text-2: #3f5552;
-  --muted: #687d7a;
-  --accent: #0d9488;        /* turkus – czysta energia */
-  --accent-strong: #0f766e;
-  --accent-soft: #d5f5ef;
-  --on-accent: #ffffff;
-  --sun: #f59e0b;
-  --blue: #1e4f9c;
-  --blue-soft: #e3ecfa;
+  --border: #dde2ec;
+  --text: #111827;
+  --text-2: #465068;
+  --muted: #6b7489;
+  --accent: #e0a800;        /* złoto */
+  --accent-strong: #1e3a8a; /* granat */
+  --accent-soft: #fbf0cc;
+  --on-accent: #0f1a3d;
+  --sun: #f5b301;
+  --blue: #1e3a8a;
+  --blue-soft: #e3e9f8;
   --pro: #15803d;
   --pro-soft: #e5f5ea;
-  --con: #be123c;
-  --con-soft: #fde8ee;
-  --house: #eaf1ef;
-  --house-line: #1f3a37;
-  --grid: #d5e3e0;
-  --shadow: 0 1px 2px rgba(10, 40, 35, .05), 0 8px 24px rgba(10, 40, 35, .07);
+  --con: #b91c1c;
+  --con-soft: #fde9e9;
+  --house: #eef1f7;
+  --house-line: #1f2a44;
+  --grid: #dde2ec;
+  --shadow: 0 1px 2px rgba(15, 26, 61, .05), 0 8px 24px rgba(15, 26, 61, .07);
   --radius: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0c1615;
-    --bg-alt: #111e1c;
-    --surface: #162523;
-    --border: #263b38;
-    --text: #e8f3f1;
-    --text-2: #b4c9c5;
-    --muted: #86a09b;
-    --accent: #2dd4bf;
-    --accent-strong: #5eead4;
-    --accent-soft: #123b36;
-    --on-accent: #062420;
+    --bg: #0b1020;
+    --bg-alt: #10172b;
+    --surface: #151d34;
+    --border: #263152;
+    --text: #eef1f8;
+    --text-2: #b9c1d6;
+    --muted: #8891aa;
+    --accent: #f5c542;
+    --accent-strong: #f5c542;
+    --accent-soft: #2a2817;
+    --on-accent: #0b1020;
     --sun: #fbbf24;
-    --blue: #93b8f2;
-    --blue-soft: #1a2a40;
+    --blue: #9db8f5;
+    --blue-soft: #1b2747;
     --pro: #4ade80;
     --pro-soft: #13301f;
-    --con: #fb7185;
-    --con-soft: #3a1520;
-    --house: #1d2f2d;
-    --house-line: #b4c9c5;
-    --grid: #263b38;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+    --con: #f87171;
+    --con-soft: #3a1818;
+    --house: #18213a;
+    --house-line: #b9c1d6;
+    --grid: #263152;
+    --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 24px rgba(0,0,0,.3);
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0c1615;
-  --bg-alt: #111e1c;
-  --surface: #162523;
-  --border: #263b38;
-  --text: #e8f3f1;
-  --text-2: #b4c9c5;
-  --muted: #86a09b;
-  --accent: #2dd4bf;
-  --accent-strong: #5eead4;
-  --accent-soft: #123b36;
-  --on-accent: #062420;
+  --bg: #0b1020;
+  --bg-alt: #10172b;
+  --surface: #151d34;
+  --border: #263152;
+  --text: #eef1f8;
+  --text-2: #b9c1d6;
+  --muted: #8891aa;
+  --accent: #f5c542;
+  --accent-strong: #f5c542;
+  --accent-soft: #2a2817;
+  --on-accent: #0b1020;
   --sun: #fbbf24;
-  --blue: #93b8f2;
-  --blue-soft: #1a2a40;
+  --blue: #9db8f5;
+  --blue-soft: #1b2747;
   --pro: #4ade80;
   --pro-soft: #13301f;
-  --con: #fb7185;
-  --con-soft: #3a1520;
-  --house: #1d2f2d;
-  --house-line: #b4c9c5;
-  --grid: #263b38;
-  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+  --con: #f87171;
+  --con-soft: #3a1818;
+  --house: #18213a;
+  --house-line: #b9c1d6;
+  --grid: #263152;
+  --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 24px rgba(0,0,0,.3);
 }
 
 /* ===== Baza ===== */
@@ -168,7 +168,9 @@ strong { font-weight: 600; }
 }
 .btn:hover { transform: translateY(-1px); }
 .btn--primary { background: var(--accent); color: var(--on-accent); }
-.btn--primary:hover { background: var(--accent-strong); color: var(--on-accent); }
+.btn--primary:hover { background: var(--accent-strong); color: #fff; }
+:root[data-theme="dark"] .btn--primary:hover { filter: brightness(1.08); color: var(--on-accent); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--primary:hover { filter: brightness(1.08); color: var(--on-accent); } }
 .btn--ghost { border: 1.5px solid var(--border); color: var(--text); background: var(--surface); }
 .btn--ghost:hover { border-color: var(--accent); }
 
